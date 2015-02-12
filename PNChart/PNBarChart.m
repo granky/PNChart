@@ -87,7 +87,7 @@
         
         for (int index = 0; index < _yLabelSum; index++) {
             
-            NSString *labelText = _yLabelFormatter((float)_yValueMax * ( (_yLabelSum - index) / (float)_yLabelSum ));
+            NSString *labelText = [NSString stringWithFormat:@"%2.1f", ((float)_yValueMax * ( (_yLabelSum - index) / (float)_yLabelSum ))];
             
             PNChartLabel * label = [[PNChartLabel alloc] initWithFrame:CGRectMake(0,
                                                                                   yLabelSectionHeight * index + _chartMargin - yLabelHeight/2.0,
